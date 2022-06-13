@@ -33,7 +33,7 @@ public class Main {
 						writer.close();
 						System.out.println("Fichier créé!");
 					}else{
-						System.out.println("Fichier existe déjà.");
+						System.out.println("Fichier a etait mise a jour.");
 					}
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -54,7 +54,10 @@ public class Main {
 						writer.close();
 						System.out.println("Fichier créé!");
 					}else{
-						System.out.println("Fichier existe déjà.");
+						PrintWriter writer = new PrintWriter(file);
+						writer.println(b);
+						writer.close();
+						System.out.println("Fichier a etait mise a jour.");
 					}
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -75,7 +78,10 @@ public class Main {
 						writer.close();
 						System.out.println("Fichier créé!");
 					}else{
-						System.out.println("Fichier existe déjà.");
+						PrintWriter writer = new PrintWriter(file);
+						writer.println(c);
+						writer.close();
+						System.out.println("Le fichier a etait mise a jour.");
 					}
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
