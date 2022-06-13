@@ -4,7 +4,7 @@ public class CD extends Multimedia {
 	private int nbPlage;
 	
 	
-	public CD(String Auteur, String Titre, String Reference) {
+	public CD() {
 		super();
 		// TODO Auto-generated constructor stub
 		 nbPlage = Uti.scanInteger("Quelle est le nombre de plage ?");

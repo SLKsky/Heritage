@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
@@ -18,18 +21,66 @@ public class Main {
 			//condition pout choix
 			if (choix.equals("CD" ))
 			{
-				CD a = new CD(null, null, null); 
+				CD a = new CD(); 
 				System.out.println(a);
+				File file = new File("/Users/benoitbarette/Desktop/JAVA.nosync/test.txt");
+
+				try 
+				{
+					if (file.createNewFile()){
+						PrintWriter writer = new PrintWriter(file);
+						writer.println(a);
+						writer.close();
+						System.out.println("Fichier créé!");
+					}else{
+						System.out.println("Fichier existe déjà.");
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			else if (choix.equals("Dvd"))
 			{
-				Dvd b = new Dvd(null, null, null, 0, null);
+				Dvd b = new Dvd();
 				System.out.println(b);
+				File file = new File("/Users/benoitbarette/Desktop/JAVA.nosync/test.txt");
+
+				try 
+				{
+					if (file.createNewFile()){
+						PrintWriter writer = new PrintWriter(file);
+						writer.println(b);
+						writer.close();
+						System.out.println("Fichier créé!");
+					}else{
+						System.out.println("Fichier existe déjà.");
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			else if (choix.equals("livre"))
 			{
-				Livre c = new Livre(0, null, null, null, 0, null);
+				Livre c = new Livre();
 				System.out.println(c);
+				File file = new File("/Users/benoitbarette/Desktop/JAVA.nosync/test.txt");
+
+				try 
+				{
+					if (file.createNewFile()){
+						PrintWriter writer = new PrintWriter(file);
+						writer.println(c);
+						writer.close();
+						System.out.println("Fichier créé!");
+					}else{
+						System.out.println("Fichier existe déjà.");
+					}
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			else if (choix.equals("Q"))
 			{
@@ -47,43 +98,8 @@ public class Main {
 
 		}
 
-
-
-
-
-		//		//print de support
-		//		System.out.println("------------------------------------------");
-		//		System.out.println("                     __\n"
-		//				+ "         .,-;-;-,.  /'_\\\n"
-		//				+ "       _/_/_/_|_\\_\\) /\n"
-		//				+ "     '-<_><_><_><_>=/\\\n"
-		//				+ "      `/_/====/_/-'\\_\\\n"
-		//				+ "       \"\"     \"\"    \"\"");
-		//		System.out.println("------------------------------------------");
-		//		Support a = new Support();
-		//		System.out.println(a);
-		//		System.out.println("--------------------------------");
-		//		
-		//		//print de multi
-		//		Multimedia b = new Multimedia();
-		//		System.out.println(b.getDuree() + " heure en moyen!");
-		//		System.out.println("--------------------------------");
-		//		
-		//		//print de livre 
-		//		Livre c = new Livre();
-		//		System.out.println(c.getNb_Page() + " page !");
-		//		System.out.println("--------------------------------");
-		//		
-		//		//print de dvd
-		//		Dvd d = new Dvd();
-		//		System.out.println("Type de bonus a l'achat : ["+ d.getBonus()+ "] Un QR-CODE et disponible au dos !");
-		//		System.out.println("--------------------------------");
-		//		
-		//		//print de cd
-		//		CD e = new CD();
-		//		System.out.println("Nombre de plage : "+ e.getNbPlage()+ " Ils s'agit d'un livre !");
-		//		System.out.println("--------------------------------");
-
 	}
 
 }
+
+

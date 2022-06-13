@@ -12,7 +12,7 @@ public class Dvd extends Multimedia {
 		this.bonus = bonus;
 	}
 	
-	public  Dvd(String Auteur, String Titre, String Reference, int duree,String bonus) {
+	public  Dvd() {
 		super();
 		// TODO Auto-generated constructor stub
 		 this.bonus = Uti.scanString("Qu'elle est le bonus ? ");

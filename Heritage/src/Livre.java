@@ -4,7 +4,7 @@ public class Livre extends Support{
 	private String Nb_Page;
 
 	
-	public Livre(int Nb_Page,String Auteur, String Titre, String Reference, int duree,String bonus) {
+	public Livre() {
 		super();
 		this.Nb_Page = Uti.scanString("Qu'elle est le nombre de page ? ");
 
