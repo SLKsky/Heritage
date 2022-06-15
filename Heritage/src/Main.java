@@ -20,73 +20,24 @@ public class Main {
 
 			//condition pout choix
 			if (choix.equals("CD" ))
+				
 			{
 				CD a = new CD(); 
 				System.out.println(a);
-				File file = new File("/Users/benoitbarette/Desktop/JAVA.nosync/test.txt");
-
-				try 
-				{
-					if (file.createNewFile()){
-						PrintWriter writer = new PrintWriter(file);
-						writer.println(a);
-						writer.close();
-						System.out.println("Fichier créé!");
-					}else{
-						System.out.println("Fichier a etait mise a jour.");
-					}
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				a.filecreat(a);
 			}
+			
 			else if (choix.equals("Dvd"))
 			{
 				Dvd b = new Dvd();
 				System.out.println(b);
-				File file = new File("/Users/benoitbarette/Desktop/JAVA.nosync/test.txt");
-
-				try 
-				{
-					if (file.createNewFile()){
-						PrintWriter writer = new PrintWriter(file);
-						writer.println(b);
-						writer.close();
-						System.out.println("Fichier créé!");
-					}else{
-						PrintWriter writer = new PrintWriter(file);
-						writer.println(b);
-						writer.close();
-						System.out.println("Fichier a etait mise a jour.");
-					}
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				b.filecreat(b);
 			}
 			else if (choix.equals("livre"))
 			{
 				Livre c = new Livre();
 				System.out.println(c);
-				File file = new File("/Users/benoitbarette/Desktop/JAVA.nosync/test.txt");
-
-				try 
-				{
-					if (file.createNewFile()){
-						PrintWriter writer = new PrintWriter(file);
-						writer.println(c);
-						writer.close();
-						System.out.println("Fichier créé!");
-					}else{
-						PrintWriter writer = new PrintWriter(file);
-						writer.println(c);
-						writer.close();
-						System.out.println("Le fichier a etait mise a jour.");
-					}
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				c.filecreat(c);
 			}
 			else if (choix.equals("Q"))
 			{
